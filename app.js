@@ -16,17 +16,27 @@
 //       console.log('clicked!') 
 //     })
 // })
-const buttons = document.querySelectorAll('.btn');
-const handleClick = (event) => {
-  console.log("target >",event.target)
-  console.log("curtarget >",event.currentTarget)
-  console.log(event.target === event.currentTarget)
-  // event.stopPropagation();
+// const buttons = document.querySelectorAll('.btn');
+// const handleClick = (event) => {
+//   console.log("target >",event.target)
+//   console.log("curtarget >",event.currentTarget)
+//   console.log(event.target === event.currentTarget)
+//   // event.stopPropagation();
+// }
+// window.addEventListener('click', function(event) {
+//   console.log("window click!", event.target)
+//   event.stopPropagation();
+// }, {capture:true})
+// buttons.forEach(button => {
+//   button.addEventListener('click', handleClick);
+// })
+// Hoisting / поднятие
+console.log(years);
+var years = 100;
+letsGo() 
+function letsGo(){
+  console.log('Go!!')
+  console.log(add(5,3))
 }
-window.addEventListener('click', function(event) {
-  console.log("window click!", event.target)
-  event.stopPropagation();
-}, {capture:true})
-buttons.forEach(button => {
-  button.addEventListener('click', handleClick);
-})
+  function add(a,b){
+    return a+b;}
