@@ -31,12 +31,49 @@
 //   button.addEventListener('click', handleClick);
 // })
 // Hoisting / поднятие
-console.log(years);
-var years = 100;
-letsGo() 
-function letsGo(){
-  console.log('Go!!')
-  console.log(add(5,3))
+// console.log(years);
+// var years = 100;
+// letsGo() 
+// function letsGo(){
+//   console.log('Go!!')
+//   console.log(add(5,3))
+// }
+//   function add(a,b){
+//     return a+b;}
+
+// Замыкание
+// function external() {
+//   const externalVar = 'я - внешняя функция';
+//   function internal() {
+//     const internalVar = 'Я - внутренняя функция';
+//     console.log('internalVar >', internalVar);
+//     console.log('externalVar >', externalVar);
+//   }
+//   return internal;
+// }
+// const internalFn = external();
+// internalFn();
+
+function createAddress(type) {
+  const address = type.toUpperCase(); 
+  return function(name) {
+    return `${address} ${name}`;
+  }
 }
-  function add(a,b){
-    return a+b;}
+const addressGrazhdanin = createAddress('Гражданин');
+const addressGrazhdanka = createAddress('Гражданка');
+console.log(addressGrazhdanin('Василий'))
+console.log(addressGrazhdanka('Александра'))
+
+function createPlayer(name) {
+  let score = 0;
+  return function scoreCount(){
+    score++;
+    return `${name} - ${score} баллов!`
+  }
+}
+
+const playerOne = createPlayer('Василий')
+const playerTwo = createPlayer('Александра')
+
+
