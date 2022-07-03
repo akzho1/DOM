@@ -180,70 +180,65 @@
 
 
 
-let name = 'Vasily';
-let nameTwo = name;
-name = 'stas';
+// let name = 'Vasily';
+// let nameTwo = name;
+// name = 'stas';
 
-let age =100;
-let ageTwo = 15;
-age =25;
-// console.log(age);
-// console.log(ageTwo);
+// let age =100;
+// let ageTwo = 15;
+// age =25;
+// // console.log(age);
+// // console.log(ageTwo);
 
-const students = ['Сергей', 'Станислав', 'Мария', 'Павел'];
-const group = students;
-// group[2] = 'Александра';
-// console.log(students);
-// console.log(group);
+// const students = ['Сергей', 'Станислав', 'Мария', 'Павел'];
+// const group = students;
+// // group[2] = 'Александра';
+// // console.log(students);
+// // console.log(group);
 
-const group2 = students.slice(0, 2);
-group2[2]= 'Василий';
-// console.log(students);
-// console.log(group2);
+// const group2 = students.slice(0, 2);
+// group2[2]= 'Василий';
+// // console.log(students);
+// // console.log(group2);
 
-const group3 = [].concat(students)
-// console.log(group3);
+// const group3 = [].concat(students)
+// // console.log(group3);
 
-const group4 = [...students];
+// const group4 = [...students];
 
-const group5 = Array.from(students); 
+// const group5 = Array.from(students); 
 
 
 
-const person = {
-  name: 'Peter',
-  age: 30
-}
+// const person = {
+//   name: 'Peter',
+//   age: 30
+// }
 
-const student = person;
-student.age = 100;
-// console.log(person);
-// console.log(student);
+// const student = person;
+// student.age = 100;
+// // console.log(person);
+// // console.log(student);
 
-const fireman = Object.assign({}, person, {age: 38, height: '1.8m'});
-// console.log(person)
-// console.log(fireman)
-
-const worker = {...person}
-// console.log(worker)
-
-const max = {
-  name: 'Max',
-  age: 20,
-  social: {
-    twitter: '@max',
-    facebook: 'maxim'
-  }
-}
-
-const max2 = Object.assign({}, max, {name: 'Max2', age: 100})
-max2.social.facebook = 'max222222';
+// const fireman = Object.assign({}, person, {age: 38, height: '1.8m'});
+// // console.log(person)
+// // console.log(fireman)
+// const worker = {...person}
+// // console.log(worker)
+// const max = {
+//   name: 'Max',
+//   age: 20,
+//   social: {
+//     twitter: '@max',
+//     facebook: 'maxim'
+//   }
+// }
+// const max2 = Object.assign({}, max, {name: 'Max2', age: 100})
+// max2.social.facebook = 'max222222';
+// // console.log(max);
+// // console.log(max2);
+// const max3 = JSON.parse(JSON.stringify(max));
+// max3.social.facebook = 'max333333';
 // console.log(max);
-// console.log(max2);
+// console.log(max3);
 
-
-const max3 = JSON.parse(JSON.stringify(max));
-max3.social.facebook = 'max333333';
-
-console.log(max);
-console.log(max3);
